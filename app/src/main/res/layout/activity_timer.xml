@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".timer">
+
+  <TextView
+      android:id="@+id/timer_module"
+      android:layout_width="211dp"
+      android:layout_height="78dp"
+      android:text="00:00"
+      android:textAlignment="center"
+      android:textSize="60sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.391" />
+
+  <Button
+      android:id="@+id/mButtonStartPause"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="92dp"
+      android:layout_marginTop="41dp"
+      android:layout_marginEnd="67dp"
+      android:text="START"
+      app:layout_constraintEnd_toStartOf="@+id/mButtonReset"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/timer_module" />
+
+  <Button
+      android:id="@+id/mButtonReset"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:layout_marginEnd="76dp"
+      android:text="RESET"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/timer_module" />
+
+  <TextView
+      android:id="@+id/txt_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="150dp"
+      android:layout_marginTop="45dp"
+      android:layout_marginEnd="148dp"
+      android:text="Set Duration"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/mButtonStartPause" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="38dp"
+      android:onClick="onBtnplus"
+      android:text="+"
+      app:layout_constraintEnd_toStartOf="@+id/button2"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txt_label" />
+
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="38dp"
+      android:onClick="onBtnminus"
+      android:text="-"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/button"
+      app:layout_constraintTop_toBottomOf="@+id/txt_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
